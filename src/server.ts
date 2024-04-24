@@ -6,6 +6,6 @@ import { CustomerRoute } from './routes/CustomerApiRoute';
 
 ValidateEnv();
 
-const app = new App([new ProductRoute(),new CustomerRoute()]);
+const app = new App([new ProductRoute(), new CustomerRoute()]);
 
 app.listen();
