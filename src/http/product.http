@@ -1,0 +1,44 @@
+# baseURL
+@baseURL = http://localhost:3000
+
+###
+# Find All Products
+GET {{ baseURL }}/products
+
+###
+# Create Products
+POST {{ baseURL }}/products
+Content-Type: application/json
+
+{
+    "ProductName": "xyz",
+    "Quantity": 0,
+    "Price": 0
+}
+
+###
+# GetProductById Products
+GET {{baseURL}}/products
+Content-Type: application/json
+{
+    "id":"xyz"
+}
+
+###
+#UpdateProduct products
+POST {{baseURL}}/products
+Content-Type: application/json
+{
+    "ProductName": "xyz",
+    "Quantity": 0,
+    "Price": 0
+}
+
+###
+#DeleteProduct products
+Delete {{baseURl}}/products
+Content-Type: application/json
+{
+    "Id":"1234"
+}
+

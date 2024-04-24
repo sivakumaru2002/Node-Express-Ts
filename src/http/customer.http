@@ -1,0 +1,16 @@
+# baseURL
+@baseURL = http://localhost:3000
+
+###
+#Find all customer
+GET {{baseURL}}/customers
+
+###
+# Create Customer
+Post {{baseURL}}/customers
+Content-type:application/json
+{
+    "CustomerName":"string",
+    "Email":"string",
+    "Phone":0
+}

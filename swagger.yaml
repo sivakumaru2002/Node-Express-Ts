@@ -1,0 +1,62 @@
+tags:
+- name: products
+  description: products API
+
+paths:
+# [GET] products
+  /products:
+    get:
+      tags:
+      - products
+      summary: Find All Products
+      responses:
+        200:
+          description: 'OK'
+        500:
+          description: 'Server Error'
+
+# [POST] products
+    post:
+      tags:
+      - products
+      summary: Add Product
+      parameters:
+      - name: body
+        in: body
+        description: Product Data
+        required: true
+        schema:
+          $ref: '#/definitions/products'
+      responses:
+        201:
+          description: 'Created'
+        400:
+          description: 'Bad Request'
+        409:
+          description: 'Conflict'
+        500:
+          description: 'Server Error'
+
+
+
+# definitions
+definitions:
+  users:
+    type: object
+    required:
+        - email
+        - password
+    properties:
+      email:
+        type: string
+        description: user Email
+      password:
+        type: string
+        description: user Password
+
+  products:
+  
+
+schemes:
+ - https
+ - http
